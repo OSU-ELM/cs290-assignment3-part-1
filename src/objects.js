@@ -9,8 +9,13 @@
 */
 
 function returnObjectLiteral() {
-  //your code here
-  return undefined; //Modify ONLY this line
+  var SnackObj = {
+    type: 'Goldfish',
+    brand: 'Pepperidge Farm',
+    flavor: 'Cheddar',
+    count: 2000,
+  };
+  return SnackObj; //Modify ONLY this line
   //end your code
 }
 
@@ -38,7 +43,17 @@ function returnObjectLiteral() {
 */
 
 //your code here
+function MessageLog(user) {
+    this.user = user;
+    this.logmessage = function (messagetext, direction) {
+        this.messagetext = messagetext;
+        this.direction = direction;
+    }
+    this.getsentmessage = function (n) {
+      
+    }
 
+}
 //end your code
 
 /**
