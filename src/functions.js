@@ -14,9 +14,10 @@
 
 //your code here
 function uselessFunction() {
-  return null;
+    return null;
 }
 //end your code
+
 
 var bar = 'not a function';
 var barType = typeof bar;
@@ -33,17 +34,15 @@ var barType = typeof bar;
 
 //your code here
 bar = function (doubleArray) {
-  var confirm_multiplcation; //confirms if number was sucessfully doubled
-  for (var i = 0; i < doubleArray.length; i++) { //loops through each node to double value, returns 'false' in case of failure
-    confirm_multiplcation = doubleArray[i];
-    doubleArray[i] *= 2;
-    if (doubleArray[i] != (confirm_multiplcation * 2)) {
-        return false;
-        break;
+    var i = 0; //used for looping
+    for (i = 0; i < doubleArray.length; i++) { //loops through each node to double value, returns 'false' in case of failure
+        if (typeof doubleArray[i] !== "number") { //catches non-numbers that can't be doubled
+            return false;
+        }
+        doubleArray[i] *= 2;
     }
-  }
-  return true;
-}
+    return true;
+};
 //end your code
 
 /**
@@ -53,11 +52,11 @@ bar = function (doubleArray) {
 * @property {Date} date - the date of the commit as a JS Date object
 * @property {string} message - the commit message
 */
-function GitLog(hash, date, message) {
+var GitLog = function (hash, date, message) {
     this.hash = hash;
     this.date = date;
     this.message = message;
-}
+};
 
     /**
     * Create a function called parseGit to parse Git commit logs
@@ -80,8 +79,37 @@ function GitLog(hash, date, message) {
 
     //your code here
 function parseGit(logArray) {
-    var GitArr = []; //new empty array for holding Gitlog type objects
-    GitArr.push( GitLog(logArray.split(' ')[0], logArray.split(' ')[1], logArray.split(' ')[2]); //Add new Gitlog to array via splitting logarray into 3 components
-    return GitArr; //return array after adding new index
+    /*
+    Notes and references: 
+    
+    I has a LOT of trouble with this part of the code, and had to rely heavily on
+    outside sources in order to get the proper syntax. Below are my sources.
+    
+    At first I tried getting the date using the string.split() method which wasn't working out. 
+    After an hour+ or so of playing around with it, I noticed the my classmate "Frank Eslami" had also 
+    had trouble with this function and posted about it on the 'Week 3 technical Discussion' thread on 1/23.
+
+    Unlike my code however, he had used the 'string.slash()' syntax and that allowed him to properly parse
+    the hash and date. After looking up what the'slice' syntax did, I borrowed it for my own code in a 
+    similar manner to what Frank Eslami wrote and got the 'hash' and 'message' parts of the function to work.
+    I also liked his use of a new Array declaration for this function and borrowed that as well.
+
+    One thing he did not have was the proper date. For that I looked on google and got help from
+    this Mozilla Developer NetWork article: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
+
+    So in summation my code sources are:
+
+    New array (logarray.length): Frank Eslami (01/23 Week 3 technical Discussion)
+    string.slice(): Frank Eslami (01/23 Week 3 technical Discussion)
+    Date coding: Mozilla Developer Network ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime)
+    */
+    var i = 0; //for loops
+    var add_date = new Date; //used to pass date values
+    Gitty = new Array(logArray.length); //new empty array of same size as parameter argument array.
+    for (i = 0; i < logArray.length; i++) {
+        add_date = new Date (logArray[i].slice(8,38));
+        Gitty[i] = new GitLog(logArray[i].slice(0, 7), add_date, logArray[i].slice(40, logArray.lastIndexOf()));
+    }
+    return Gitty; //return array after adding new index
 }
     //end your code
