@@ -1,1 +1,12 @@
-You log goes in this  file.
+
+Start:Sat, 24 Jan 2015 15:30:00 -0800
+End: Sat, 24 Jan 2015 18:15:20 -0800
+Tasks: Finished coding, then testing functions.js and variables.js
+
+Start:Sat, 24 Jan 2015 10:33:00 -0800
+End: Sat, 24 Jan 2015 14:18:27 -0800
+Tasks: Finished the file Objects.js after running it through the provided tests
+
+Start:Thu, 22 Jan 2015 20:00:00 -0800
+End: Thu, 22 Jan 2015 22:46:16 -0800
+Tasks: Started working on the first 2 .js files. Still incomplete and untested
