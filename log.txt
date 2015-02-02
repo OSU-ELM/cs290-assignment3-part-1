@@ -10,3 +10,25 @@ Tasks: Finished the file Objects.js after running it through the provided tests
 Start:Thu, 22 Jan 2015 20:00:00 -0800
 End: Thu, 22 Jan 2015 22:46:16 -0800
 Tasks: Started working on the first 2 .js files. Still incomplete and untested
+
+*************START PART 2******************************
+
+Start:Sun, 1 Feb 2015 13:00:00 -0800
+End: Sun, 1 Feb 2015 18:57:08 -0800
+Tasks: Final draft of code. Everything works mostly, except that prior search results don't refresh
+
+Start:Sat, 31 Jan 2015 17:53:44 -0800
+End: Sat, 31 Jan 2015 23:41:05 -0800
+Tasks: I have made it to where I can save favorite links, but beyond that I am stuck
+
+Start: Sat, 31 Jan 2015 10:00:00 -0800
+End: Sat, 31 Jan 2015 17:53:44 -0800
+Tasks: Ajax calls are now working- although I still haven't added functionality
+
+Start: Thu, 29 Jan 2015 23:00:25 -0800
+End: Sat, 31 Jan 2015 01:17:56 -0800
+Tasks: Still working on Javascript- unable to isolate 'language' elemet from Gists
+
+Start:Thu, 29 Jan 2015 20:00:00 -0800
+End: Thu, 29 Jan 2015 23:00:25 -0800
+Tasks: Created a skeleton HTML page and started work on it's Javascript. So far
